@@ -7,11 +7,7 @@ import { JsonListaServiceService } from '../services/json-lista-service.service'
   styleUrls: ['./historico-reservas.component.css']
 })
 export class HistoricoReservasComponent {
-<<<<<<< HEAD
   displayedColumns: string[] = ['Sala', 'Professor', 'Data', 'Aluno', 'Turma'];
-=======
-  displayedColumns: string[] = ['Sala', 'Professor', 'Data', 'Aluno'];
->>>>>>> bedd72fde14f53ca5752ce612ae44f604013fd21
   reservas!: any
 
   constructor(private reservasService: JsonListaServiceService) {
