@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+.form-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+}
+  
+.form {
+    display: grid;
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.input-field {
+    width: 300px;
+}
+  
+  

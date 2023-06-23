@@ -1,1 +1,18 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="toolbar-title">CONTROLE DE ACESSO</span>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/solicitar">
+        <mat-icon>alarm_add</mat-icon>
+        <span>Solicitar Reserva</span>
+    </button>
+    <button mat-menu-item routerLink="/historico">
+        <mat-icon>event_note</mat-icon>
+        <span>Histórico Reserva</span>
+    </button>
+</mat-menu>
 <router-outlet></router-outlet>

@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="form-container">
+      <form (ngSubmit)="submitForm()" #reservaForm="ngForm" class="form">
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Aluno</mat-label>
+          <input matInput placeholder="Ythalo..." [(ngModel)]="nomeAluno" name="nomeAluno">
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Turma</mat-label>
+          <mat-select [(ngModel)]="turma" name="turma">
+            <mat-option value="1° ano">1° ano</mat-option>
+            <mat-option value="2° ano">2° ano</mat-option>
+            <mat-option value="3° ano">3° ano</mat-option>
+            <mat-option value="Subsequente">Subsequente</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Professor</mat-label>
+          <input matInput placeholder="Allan" [(ngModel)]="nomeProfessor" name="nomeProfessor" required>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Sala</mat-label>
+          <mat-select [(ngModel)]="sala" name="sala" required>
+            <mat-option value="1° ano">1° ano</mat-option>
+            <mat-option value="2° ano">2° ano</mat-option>
+            <mat-option value="3° ano">3° ano</mat-option>
+            <mat-option value="Laboratório 1">Laboratório 1</mat-option>
+            <mat-option value="Laboratório 2">Laboratório 2</mat-option>
+            <mat-option value="Lab. de Manutenção">Lab. de Manutenção</mat-option>
+            <mat-option value="Lab. de Robótica">Lab. de Robótica</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Data</mat-label>
+          <input matInput [matDatepicker]="datePicker" placeholder="Escolha a data" [(ngModel)]="dataReserva" name="dataReserva" required>
+          <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+          <mat-datepicker #datePicker></mat-datepicker>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Hora</mat-label>
+          <input matInput [ngxTimepicker]="timePicker" placeholder="Escolha a hora" [(ngModel)]="horaReserva" name="horaReserva" required>
+          <ngx-material-timepicker #timePicker></ngx-material-timepicker>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit" [disabled]="!reservaForm.form.valid">Enviar</button>
+      </form>
+    </div>
+</div>
+  

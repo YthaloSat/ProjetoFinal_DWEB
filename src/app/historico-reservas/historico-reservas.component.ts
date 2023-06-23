@@ -7,18 +7,18 @@ import { JsonListaServiceService } from '../services/json-lista-service.service'
   styleUrls: ['./historico-reservas.component.css']
 })
 export class HistoricoReservasComponent {
-  lista!: any
-  ocorrencias!: any
+  displayedColumns: string[] = ['Sala', 'Professor', 'Data', 'Aluno', 'Turma'];
+  reservas!: any
 
-  constructor(private jsonListaServiceService: JsonListaServiceService) {
-    this.getLista()
+  constructor(private reservasService: JsonListaServiceService) {
+    this.getReservas()
+  }
+  getReservas(): void {
+    this.reservasService.getReservas().subscribe(lista => this.reservas = lista)
   }
 
-  getLista(): void {
-    this.jsonListaServiceService.getAll().subscribe(listas => this.lista = listas)
-  }
-
-  getOcorrencias(indice: number): void {
-    this.ocorrencias = this.lista[indice].ocorrencias;
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.reservas.filter = filterValue.trim().toLowerCase();
   }
 }
