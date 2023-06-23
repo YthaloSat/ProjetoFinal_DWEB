@@ -7,10 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class JsonListaServiceService {
   private url = 'https://allramos.github.io/desenvolvimento-web/lista-reservas.json'
-
   constructor(private http: HttpClient) { }
-
-  getAll(): Observable<any> {
+  getReservas(): Observable<any> {
     return this.http.get<any>(this.url)
   }
 }

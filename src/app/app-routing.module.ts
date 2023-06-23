@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HistoricoReservasComponent } from './historico-reservas/historico-reservas.component';
 
 const routes: Routes = [
-  {path: "", redirectTo: "/historicoReservas", pathMatch: "full"},
-  {path: "historicoReservas", component: HistoricoReservasComponent},
+  { path: "", redirectTo: "/historicoReservas", pathMatch: "full" },
+  { path: "historico", component: HistoricoReservasComponent },
 ];
 
 @NgModule({
