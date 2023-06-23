@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .table-container {
     overflow-x: auto;
     max-width: 100%;
@@ -19,3 +20,19 @@ table {
     white-space: nowrap; 
 }
   
+=======
+*{
+  text-align: center;
+}
+table {
+  width: 100%;
+}
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+span{
+  font-size: 16px;
+  font-weight: 500;
+}
+>>>>>>> bedd72fde14f53ca5752ce612ae44f604013fd21
